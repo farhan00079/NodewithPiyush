@@ -1,0 +1,7 @@
+humlog backend start kar rhe h padhna
+nodejs :- me window, dom, ui part wala kaam nhi karega
+nodejs :- v8 + c++ dono milkar bana h but v8 ka frontend wala part use nhi kiya bas backend wala part use hus h
+npm :- node package manager
+package.json create krne ke liye :- npm init
+node hello.js :- run
+node run ... :- run
