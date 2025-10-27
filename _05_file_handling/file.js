@@ -32,8 +32,7 @@ fs.copyFileSync("test.txt", "copy.txt");
 
 fs.unlinkSync("./text.txt");
 
-const stats = fs.statSync("./test.txt"); // file info deta hai
-console.log(stats.isFile()); // true agar file hai, false agar nahi
+console.log(fs.statSync)
 
 fs.mkdirSync("my-docs");
 
