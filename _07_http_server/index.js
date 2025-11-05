@@ -2,7 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const url = require("url");
 
-const myServer = http.createServer((req, res) => {
+function myHandler(req, res){
     if (req.url === "/favicon.ico") return res.end();
 //   console.log("New req rec...");
 //   console.log(req);
@@ -18,13 +18,20 @@ const myServer = http.createServer((req, res) => {
         case "/about": 
         res.end("I am farhan alam");
         break;
+        case "/signUp":
+            if(req.method === "Get") res.end("This is a singup Form");
+            else if(req.method === "Post"){
+                // ~~~ DB Quesery ~~~
+                res.end("Success");
+            }
         default:
         res.end("404 Not found");
         break;
     }
    }) 
- 
-});
+}
+
+const myServer = http.createServer(myHandler);
 
 myServer.listen(5000, ()=>{
     console.log("server started");
