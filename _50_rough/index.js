@@ -1,11 +1,15 @@
-const http = require("http");
+const express = require("express");
 
-const server = http.createServer((req, res) => {
-    console.log("hello this server is started.......");
-    res.end("the server is already started yet....");
+const app = express();
+
+app.get("/", (req, res) => {
+    res.send("hello this is a home page");
 })
 
-server.listen(5000, ()=>{
-    console.log("server has started.......");
-    
+app.get("/about", (req, res) => {
+    res.send(`hello this is a about page ${req.query.name} your age is : ${req.query.age}`);
+})
+
+app.listen("3000", () => {
+    console.log("server has started farhan bhai!!!");
 })

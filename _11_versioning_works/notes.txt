@@ -1,0 +1,45 @@
+versioning works in nodejs
+
+// 4.18.3
+
+1st part -> 4
+2nd part -> 18
+3rd part -> 2
+
+// 3rd part (last part) - Minor Fixes (optional)
+latest -> 4.18.5
+minor changes hua h updaate krna h to kro nhi to koi baat nhi ye kuch effect nhi krta hua
+
+// 2nd part - Recommended Bug Fix (Securing app)
+Latest -> 4.19.1
+ye recommended h update krna kroge to acha rhega kuch acha isme update hua h 
+
+// 3rd Part - Major / Breaking updaate
+Latest -> 5.1.0
+ye major update h to kabhi bhi existing project me change mt krna kyuki code break ho skta h, ye new project me update krna 
+
+// npm i express@4.17.2
+apne marji ka jo chao woh express version install kr skte hAmMzIlypy4xcBg1vKVnx89Wy0GbS
+
+express = ^4.18.2
+4th version 
+
+^4.18.2 | 4.18.2 -> < 5.0.0 |
+compatible with verison 
+
+^4.17.9 
+4.18.1
+4.18.2
+ye sab updaate kr dega but
+5.1.0 ye update nhi karega
+ye minor or reccommed change krega baki version ko change nhi karega
+
+^ - install all recommended and Minor Fixes automatically
+^ - carrot symbol 
+
+~ - squiggle line / tild
+
+~ 4.18.1
+~ 4.18.2
+ye sirf minor fix ko change karta h baki kisi ko change nhi karge
+
