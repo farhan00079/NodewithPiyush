@@ -1,0 +1,10 @@
+-> always respect all http method
+Get post  put  patch  delete 
+get/user - users data read kro & return data
+post/user - handle new user creation 
+patch/user - update the user
+post/update user - user update 
+post/create user - create
+post/delete user - delete --> ye nhi kana h
+1. client - browser  html render       MERN - json 
+2. respect - http method 

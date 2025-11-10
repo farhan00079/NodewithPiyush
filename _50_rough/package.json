@@ -4,7 +4,8 @@
   "description": "",
   "main": "rough.js",
   "scripts": {
-    "start": "node index"
+    "start": "node index",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
