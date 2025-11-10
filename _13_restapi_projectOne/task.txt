@@ -1,10 +1,14 @@
 REST API - JSON
 
-GET /users - List all users - HTML me render karega
-GET /api/users - List all users -- JSON me render karega
+GET /users - List all users - HTML me render karega - for website 
+GET /api/users - List all users -- JSON me render karega - ye reactive native, mobile ke liye
 
 GET /api/users/1 - Get the user with ID 1
 GET /api/users/2 - Get the user with ID 2
+
+Dynamic Path Parameters 
+GET /api/users/:id 
+:id -> Variable
 
 POST /api/users - Create new user
 
