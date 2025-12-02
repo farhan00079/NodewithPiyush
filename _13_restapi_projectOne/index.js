@@ -1,12 +1,36 @@
 const express = require("express");
 const fs = require("fs");
 const users = require("./MOCK_DATA.json");
+const { fileURLToPath } = require("url");
 
 const app = express();
 const PORT = 3500;
 
+// ~~~~~~~ Lecture - 14 ~~~~~~~~~~~
 // ~~~~~~ Middleware -> Plugin ~~~~~~~~~
 app.use(express.urlencoded({extended : false }));
+
+// ~~~~~~~~~~ Lecture - 15 ~~~~~~~~
+app.use((req, res, next) => {
+    console.log("hello from middleware 1");
+    // return res.json({mgs: "hello from middleware 2"});
+    req.userName = "farhanalam.dev";
+    next();
+    
+})
+
+app.use((req, res, next) => {
+    console.log("hello from middleware 2", req.userName);
+    // return res.end("hey");
+    next();
+    
+})
+
+app.use((req, res, next) => {
+   fs.appendFile("log.txt", `\n${Date.now()}: ${req.ip}: ${req.method}: ${req.path}`, (err, data)=> {
+    next();
+   })
+})
 
 // ~~~~ Route ~~~~~~~~~
 app.get("/users", (req, res) => {
@@ -23,6 +47,7 @@ app.get("/users", (req, res) => {
 
 // ~~~~~~ Rest Apis ~~~~~
 app.get("/api/users", (req, res) => {
+    console.log("i am a root one", req.userName);
     return res.json(users);
 });
 
